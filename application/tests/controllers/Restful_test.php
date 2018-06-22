@@ -6,7 +6,6 @@ class Restful_test extends TestCase {
   
   function setUp() {
       parent::setUp();
-      $this->ci = &get_instance();
   }
 
   public function test_index_get(){
