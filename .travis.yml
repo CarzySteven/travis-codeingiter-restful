@@ -7,7 +7,6 @@ php:
 
 env:
   - DB=mysql
-  - DB=pdo/mysql
 
 before_script:
   - composer install
