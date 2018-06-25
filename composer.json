@@ -1,16 +1,80 @@
 {
-    "name": "chobits/ci",
-    "authors": [
-        {
-            "name": "steven",
-            "email": "carzysteven@gmail.com"
-        }
-    ],
+    "description": "The CodeIgniter framework",
+    "name": "codeigniter/framework",
+    "type": "project",
+    "homepage": "https://codeigniter.com",
+    "license": "MIT",
+    "support": {
+        "forum": "http://forum.codeigniter.com/",
+        "wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
+        "irc": "irc://irc.freenode.net/codeigniter",
+        "source": "https://github.com/bcit-ci/CodeIgniter"
+    },
     "require": {
-        "chriskacerguis/codeigniter-restserver": "^3.0",
-        "guzzlehttp/guzzle": "^6.3"
+        "php": ">=5.4",
+        "wixel/gump": "dev-master",
+        "phpauth/phpauth": "dev-master",
+        "facebook/graph-sdk": "5.4.3",
+        "pimax/fb-messenger-php": "dev-master",
+        "hashids/hashids": "^2.0",
+        "mpociot/botman": "dev-master",
+        "davidpiesse/facebook_messenger_php": "dev-master",
+        "phpoffice/phpexcel": "^1.8",
+        "php-amqplib/php-amqplib": "^2.6",
+        "phpmailer/phpmailer": "5.2.*",
+        "ozdemir/datatables": "1.6.10",
+        "google/cloud-storage": "1.5.2"
+    },
+    "repositories": [
+            {
+                    "type": "git",
+                    "url": "https://github.com/yuyaun/fb-messenger-php.git"
+            },
+            {
+                    "type": "git",
+                    "url": "https://github.com/yuyaun/botman.git"
+            },
+            {
+                    "type": "git",
+                    "url": "https://github.com/yuyaun/facebook_messenger_php.git"
+            },
+            {
+                    "type": "git",
+                    "url": "https://github.com/CarzySteven/datatables.git"
+            },
+            {
+                "type": "package",
+                "package": {
+                    "name": "phpauth/phpauth",
+                    "version": "master",
+                    "dist": {
+                        "type": "zip",
+                        "url": "https://storage.googleapis.com/steven-bucket/phpauth1.1.1.zip",
+                        "reference": "master"
+                    },
+                    "autoload": {
+                        "psr-4": {
+                            "PHPAuth\\": "/"
+                        }
+                    },
+                    "require": {
+                        "bjeavons/zxcvbn-php": "*",
+                        "php": ">=5.4.0",
+                        "phpmailer/phpmailer": "^5.2"
+                    }
+                }
+            }
+    ],
+    "suggest": {
+        "paragonie/random_compat": "Provides better randomness in PHP 5.x"
     },
     "require-dev": {
-        "kenjis/ci-phpunit-test": "^0.16.1"
+        "mikey179/vfsStream": "1.1.*",
+        "kenjis/ci-phpunit-test": "^0.13.0"
+    },
+    "minimum-stability":"dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist"
     }
 }
