@@ -12,7 +12,7 @@ class Restful extends REST_Controller {
   public function index_get()
   {
   	$result = $this->db->get('restful')->result();
-    return $this->response($result, 200);
+    $this->response($result, 200);
   }
 
   public function index_post()
