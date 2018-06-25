@@ -21,6 +21,7 @@ class Restful_test extends TestCase {
       $this->assertObjectHasAttribute('createdAt', $data);  
     }
     
+    $this->assertEquals($res->getStatusCode(), 200);
     // $this->assertResponseCode(200);
   }
 
