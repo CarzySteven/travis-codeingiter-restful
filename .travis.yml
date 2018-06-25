@@ -1,5 +1,7 @@
 language: php
 
+sudo: required
+
 php:
   - 7.0
 env:
@@ -11,5 +13,6 @@ before_script:
   - mysql -u root travis < travis.sql
 
 script:
+  - nohup php -S localhost:80 &
   - cd application/tests
   - phpunit
