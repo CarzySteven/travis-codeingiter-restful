@@ -2,11 +2,6 @@
 // defined('BASEPATH') OR exit('No direct script access allowed');
 // require APPPATH . 'libraries/REST_Controller.php';
 
-namespace GuzzleHttp\Tests\Psr7;
-use GuzzleHttp\Psr7;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7\Uri;
-
 class Restful_test extends TestCase {
   private $ci;
   protected $http = null;
@@ -18,8 +13,7 @@ class Restful_test extends TestCase {
 
   public function test_index_get(){
     $uri = new Uri('/restful/index');
-    $res = $this->http->request('GET', $rui);
-    // $res = $this->http->request('GET', 'http://127.0.0.1/index.php/restful/index');
+    $res = $this->http->request('GET', 'http://travis.test/travis-codeingiter-restful/index.php/restful/index');
     $response = json_decode($res->getBody());
     $this->assertObjectHasAttribute('id', $response);
     $this->assertObjectHasAttribute('method', $response);
