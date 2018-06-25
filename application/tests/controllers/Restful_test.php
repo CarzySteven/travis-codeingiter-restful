@@ -12,7 +12,7 @@ class Restful_test extends TestCase {
   }
 
   public function test_index_get(){
-    $res = $this->http->request('GET', $_SERVER['HTTP_HOST'].'index.php/restful/index');
+    $res = $this->http->request('GET', $_SERVER['HTTP_HOST'].'/index.php/restful/index');
     $response = json_decode($res->getBody());
     $this->assertObjectHasAttribute('id', $response);
     $this->assertObjectHasAttribute('method', $response);
