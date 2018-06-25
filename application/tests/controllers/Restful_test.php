@@ -12,7 +12,6 @@ class Restful_test extends TestCase {
   }
 
   public function test_index_get(){
-    $uri = new Uri('/restful/index');
     $res = $this->http->request('GET', 'http://travis.test/travis-codeingiter-restful/index.php/restful/index');
     $response = json_decode($res->getBody());
     $this->assertObjectHasAttribute('id', $response);
