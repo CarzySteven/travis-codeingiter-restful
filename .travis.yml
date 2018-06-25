@@ -1,9 +1,5 @@
 language: php
 
-addons:
-  hosts:
-  - travis.test
-  
 php:
   - 7.0
 env:
