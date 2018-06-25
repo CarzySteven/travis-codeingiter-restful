@@ -15,7 +15,7 @@ class Restful_test extends TestCase {
     // $output = $this->request('GET', 'http://127.0.0.1/index.php/restful/index');
     // $output = $this->request('GET', 'restful/index');
     // $this->get('restful/index');
-    $res = $this->http->request('GET', 'http://127.0.0.1/index.php/restful/index');
+    $res = $this->http->request('GET', 'http://travis.test/index.php/restful/index');
     $response = json_decode($res->getBody());
     // $response = json_decode($this->response->getBody(), true);
     // echo "<br>";
