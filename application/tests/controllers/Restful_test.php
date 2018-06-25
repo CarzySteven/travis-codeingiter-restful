@@ -2,6 +2,11 @@
 // defined('BASEPATH') OR exit('No direct script access allowed');
 // require APPPATH . 'libraries/REST_Controller.php';
 
+namespace GuzzleHttp\Tests\Psr7;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Uri;
+
 class Restful_test extends TestCase {
   private $ci;
   protected $http = null;
